@@ -70,27 +70,27 @@ class HomePage extends StatelessWidget {
   List<Widget> _buildActions() {
     return <Widget>[
       MaterialButton(
+        onPressed: () {},
         child: Text(
           Strings.menu_home,
           style: TextStyles.menu_item.copyWith(
             color: Color(0xFF50AFC0),
           ),
         ),
-        onPressed: () {},
       ),
       MaterialButton(
+        onPressed: () {},
         child: Text(
           Strings.menu_about,
           style: TextStyles.menu_item,
         ),
-        onPressed: () {},
       ),
       MaterialButton(
+        onPressed: () {},
         child: Text(
           Strings.menu_contact,
           style: TextStyles.menu_item,
         ),
-        onPressed: () {},
       ),
     ];
   }
@@ -285,18 +285,16 @@ class HomePage extends StatelessWidget {
 
   // Skills Methods:------------------------------------------------------------
   final skills = [
-    'Java',
-    'Kotlin',
+    'Python',
+    'Odoo',
+    'Javascript',
+    'Postgresql',
     'Dart',
     'Flutter',
-    'Android',
-    'iOS',
-    'Xamarin',
-    'Reactive Programming',
-    'Jenkins',
-    'Photoshop',
-    'JFrog Atrtifactory',
-    'Code Magic',
+    'XML',
+    'HTML && CSS',
+    'DevOps',
+    'Photoshop && Illustrator',
   ];
 
   Widget _buildSkills(BuildContext context) {
@@ -339,21 +337,9 @@ class HomePage extends StatelessWidget {
   // Education Methods:---------------------------------------------------------
   final educationList = [
     Education(
-      'Apr 2018',
-      'Present',
-      'Embrace-it Pakistan',
-      'Sr. Software Engineer',
-    ),
-    Education(
-      'Apr 2016',
-      'Apr 2018',
-      'TEO International',
-      'Sr. Software Engineer',
-    ),
-    Education(
-      'July 2014',
-      'March 2016',
-      'Citrusbits',
+      'Sep 2008',
+      'Sep 2012',
+      'HCM University',
       'Software Engineer',
     ),
   ];
@@ -428,12 +414,12 @@ class HomePage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               Align(
-                child: _buildCopyRightText(context),
                 alignment: Alignment.centerLeft,
+                child: _buildCopyRightText(context),
               ),
               Align(
-                child: _buildSocialIcons(),
                 alignment: Alignment.centerRight,
+                child: _buildSocialIcons(),
               ),
             ],
           ),
