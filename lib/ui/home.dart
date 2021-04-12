@@ -1,4 +1,6 @@
-import 'package:flutter_web/material.dart';
+// import 'package:flutter_web/material.dart';
+
+import 'package:flutter/material.dart';
 import 'package:portfolio/constants/assets.dart';
 import 'package:portfolio/constants/fonts.dart';
 import 'package:portfolio/constants/strings.dart';
@@ -6,7 +8,7 @@ import 'package:portfolio/constants/text_styles.dart';
 import 'package:portfolio/models/education.dart';
 import 'package:portfolio/utils/screen/screen_utils.dart';
 import 'package:portfolio/widgets/responsive_widget.dart';
-import 'dart:html' as html;
+// import 'dart:html' as html;
 
 class HomePage extends StatelessWidget {
   @override
@@ -196,9 +198,11 @@ class HomePage extends StatelessWidget {
         _buildAboutMe(context),
         SizedBox(height: 4.0),
         _buildHeadline(context),
-        SizedBox(height: ResponsiveWidget.isSmallScreen(context) ? 12.0 : 24.0),
+        SizedBox(
+            height: ResponsiveWidget.isSmallScreen(context) ? 12.0 : 24.0),
         _buildSummary(),
-        SizedBox(height: ResponsiveWidget.isSmallScreen(context) ? 24.0 : 48.0),
+        SizedBox(
+            height: ResponsiveWidget.isSmallScreen(context) ? 24.0 : 48.0),
         ResponsiveWidget.isSmallScreen(context)
             ? Column(
                 mainAxisSize: MainAxisSize.min,
@@ -381,7 +385,7 @@ class HomePage extends StatelessWidget {
   }
 
   Widget _buildEducationTimeline() {
-    final List<Widget> widgets = educationList
+    final widgets = educationList
         .map((education) => _buildEducationTile(education))
         .toList();
     return Column(children: widgets);
@@ -454,8 +458,8 @@ class HomePage extends StatelessWidget {
       children: <Widget>[
         GestureDetector(
           onTap: () {
-            html.window
-                .open("https://www.linkedin.com/in/zubairehman/", "LinkedIn");
+            // html.window
+            //     .open("https://www.linkedin.com/in/zubairehman/", "LinkedIn");
           },
           child: Image.network(
             Assets.linkedin,
@@ -467,7 +471,7 @@ class HomePage extends StatelessWidget {
         SizedBox(width: 16.0),
         GestureDetector(
           onTap: () {
-            html.window.open("https://medium.com/@zubairehman.work", "Medium");
+            // html.window.open("https://medium.com/@zubairehman.work", "Medium");
           },
           child: Image.network(
             Assets.evernote,
@@ -479,7 +483,7 @@ class HomePage extends StatelessWidget {
         SizedBox(width: 16.0),
         GestureDetector(
           onTap: () {
-            html.window.open("https://github.com/zubairehman", "Github");
+            // html.window.open("https://github.com/zubairehman", "Github");
           },
           child: Image.network(
             Assets.google,
@@ -491,7 +495,7 @@ class HomePage extends StatelessWidget {
         SizedBox(width: 16.0),
         GestureDetector(
           onTap: () {
-            html.window.open("https://twitter.com/zubair340", "Twitter");
+            // html.window.open("https://twitter.com/zubair340", "Twitter");
           },
           child: Image.network(
             Assets.twitter,
